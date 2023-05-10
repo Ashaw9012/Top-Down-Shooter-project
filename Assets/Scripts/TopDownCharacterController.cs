@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,7 +17,9 @@ public class TopDownCharacterController : MonoBehaviour
 
     //The speed at which they're moving
     private float playerSpeed = 1f;
-
+    
+    //bullet
+    public GameObject Bullet; 
 
     [Header("Movement parameters")]
 
@@ -49,7 +52,20 @@ public class TopDownCharacterController : MonoBehaviour
         //Not performed? Don't run any other code
         if (!context.performed)
             return;
-
+        
+        //spawn bullet prefab
+       GameObject bullet = Instantiate(Bullet, transform.position, quaternion.identity); 
+        
+        //set direction
+        bullet.GetComponent<Projectile>().direction = playerDirection; 
+        //speed
+        bullet.GetComponent<Projectile>().speed = 8f; 
+        
+        if (playerDirection == Vector2.zero)
+        {
+            bullet.GetComponent<Projectile>().direction = Vector2.right; 
+        }
+        
         //Otherwise:
         Debug.Log($"Shoot! {Time.time}", gameObject);
     }
