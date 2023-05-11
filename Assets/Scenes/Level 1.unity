@@ -40519,6 +40519,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1616815951811499562, guid: 9a049d325d0ed8c48b24c3060426d3d9, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1861326234}
     - target: {fileID: 1616815951811499570, guid: 9a049d325d0ed8c48b24c3060426d3d9, type: 3}
       propertyPath: m_Name
       value: Shroomer (1)
@@ -41077,6 +41081,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 362080506594814895, guid: 9a049d325d0ed8c48b24c3060426d3d9, type: 3}
+      propertyPath: health
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 362080506594814895, guid: 9a049d325d0ed8c48b24c3060426d3d9, type: 3}
+      propertyPath: maxHealth
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1616815951811499560, guid: 9a049d325d0ed8c48b24c3060426d3d9, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -41120,6 +41132,10 @@ PrefabInstance:
     - target: {fileID: 1616815951811499560, guid: 9a049d325d0ed8c48b24c3060426d3d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616815951811499562, guid: 9a049d325d0ed8c48b24c3060426d3d9, type: 3}
+      propertyPath: damage
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1616815951811499562, guid: 9a049d325d0ed8c48b24c3060426d3d9, type: 3}
       propertyPath: playerHealth

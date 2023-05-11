@@ -10,7 +10,9 @@ public class Projectile : MonoBehaviour
     public Vector2 direction;
     //bullet speed
     public float speed = 5f;
-
+    //bullet damage
+    public int damage; 
+    public Enemyhealth enemyHealth;
     public void Start()
     {
         //move the bullet
@@ -21,5 +23,10 @@ public class Projectile : MonoBehaviour
     {
         Debug.Log("collision");
         Destroy(gameObject);
+        
+        if (collison.gameObject.tag == "Enemy")
+        {
+            enemyHealth.TakeDamage(damage);
+        }
     }
 }
