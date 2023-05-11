@@ -122,8 +122,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0}
   speed: 5
-  damage: 1
-  enemyHealth: {fileID: 0}
+  damage: 5
+  enemyHealth: {fileID: 362080506594814895, guid: 9a049d325d0ed8c48b24c3060426d3d9, type: 3}
 --- !u!61 &4036316111207181649
 BoxCollider2D:
   m_ObjectHideFlags: 0

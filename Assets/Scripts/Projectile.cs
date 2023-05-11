@@ -19,14 +19,16 @@ public class Projectile : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = direction * speed; 
     }
 
-    private void OnCollisionEnter2D(Collision2D collison)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("collision");
         Destroy(gameObject);
         
-        if (collison.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             enemyHealth.TakeDamage(damage);
         }
+        
+        
     }
 }
